@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse DSH Directory
+    url: https://dsh.directory
+    about: Search published plugins before submitting a new one.
+  - name: Submission rules and contributing guide
+    url: https://github.com/alexchenzl/dsh-plugin-directory/blob/main/CONTRIBUTING.md
+    about: Eligibility rules, corrections to an existing record, and pull request guidance.
