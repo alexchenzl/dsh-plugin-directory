@@ -1,4 +1,4 @@
-# DSH Directory — Discover DeepSeek Harness plugins built by the community
+# DSH Directory — Discover DeepSeek Harness plugins
 
 ![DSH Hero Banner](assets/dsh-hero-banner.png)
 
