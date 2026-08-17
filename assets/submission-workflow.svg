@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
   <title id="title">Plugin submission verification workflow</title>
-  <desc id="desc">A plugin is submitted and checked immediately. Passing submissions are listed and closed. Failed submissions can be fixed and are checked daily for seven days. After the window closes, the issue is closed and the plugin may be submitted again.</desc>
+  <desc id="desc">A plugin is submitted and checked periodically. Passing submissions are listed and closed. Failed submissions can be fixed and are checked daily for seven days. After the window closes, the issue is closed and the plugin may be submitted again.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#52637a" />
@@ -50,8 +50,8 @@
 
   <rect class="box action" x="290" y="68" width="220" height="64" rx="12" />
   <text class="label" x="400" y="95">
-    <tspan x="400" dy="0">Automated check</tspan>
-    <tspan x="400" dy="23">runs immediately</tspan>
+    <tspan x="400" dy="0">Periodically</tspan>
+    <tspan x="400" dy="23">run check</tspan>
   </text>
 
   <polygon class="decision" points="620,55 720,100 620,145 520,100" />
