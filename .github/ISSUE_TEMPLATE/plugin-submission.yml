@@ -20,9 +20,14 @@ body:
     id: url
     attributes:
       label: Plugin package URL
-      description: >-
+      description: |-
         The exact GitHub directory that is the plugin package root, on the repository's current default
-        branch. Do not link a `package.json`, patch file, README, or any other single file.
+        branch. A repository-root plugin does not need a `/tree/...` path; a plugin in a subdirectory does.
+
+        - **Root package:** https://github.com/liustack/modlens
+        - **Nested package:** https://github.com/volcengine/OpenViking/tree/main/examples/dsh-memory-plugin
+
+        Do not link a `package.json`, patch file, README, or any other single file.
       placeholder: https://github.com/owner/repository/tree/main/path/to/plugin
     validations:
       required: true

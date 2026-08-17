@@ -19,16 +19,19 @@ Plugin authors and community members submit **one plugin package per issue** thr
 - a one-line description of the plugin's main capability; and
 - the install command copied from the plugin's own documentation.
 
-Automated checks validate those fields and confirm the package has the expected DSH bundle structure: a `package.json` directly in the submitted directory declaring `dsh.bundle.patch`, with the declared patch file inside that directory. Checks run when the issue opens and then once per day for seven days. Accepted submissions receive their listing URL and are closed; unaccepted submissions are closed after the final check and may be submitted again later. The upstream repository remains the source of truth for the plugin itself.
+Automated checks validate the submitted information and package structure. Checks run when the issue opens and then once per day for seven days. Accepted submissions receive their listing URL and are closed; unaccepted submissions are closed after the final check and may be submitted again later. The upstream repository remains the source of truth for the plugin itself.
 
-## What you can find
+## What can pass verification
 
-Each listing helps users understand and evaluate a plugin by presenting:
+Verification is intended for publicly accessible, installable DSH Profile Bundles. A plugin can pass when:
 
-- a concise description of its main capability;
-- its primary Harness category;
-- a link to the exact upstream plugin package; and
-- the installation command documented by the plugin.
+- the submitted URL identifies the exact package directory on the repository's current default branch;
+- that directory contains its own `package.json`;
+- `package.json` declares `dsh.bundle.patch`;
+- the declared patch file exists inside the submitted package directory; and
+- the submission includes a valid category, factual one-line description, and documented install command.
+
+A package that declares only `dsh.client` is not an installable Profile Bundle and cannot pass. These checks verify structure and listing information, not the plugin's runtime behavior, quality, compatibility, or security. See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete submission requirements.
 
 ## Trust and safety
 
