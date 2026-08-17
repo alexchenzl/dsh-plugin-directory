@@ -1,8 +1,12 @@
-# DSH Plugin Directory
+<h1 align="center">
+  <img src="assets/dsh-hero-banner.png" alt="DSH Directory — Discover DeepSeek Harness plugins built by the community" width="100%" />
+</h1>
 
-The community-maintained submission directory for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) plugins.
-
-[Browse DSH Directory](https://dsh.directory) · [Submit a plugin](https://github.com/alexchenzl/dsh-plugin-directory/issues/new?template=plugin-submission.yml) · [Contributing guide](CONTRIBUTING.md)
+<p align="center">
+  <a href="https://dsh.directory">Browse DSH Directory</a> ·
+  <a href="https://github.com/alexchenzl/dsh-plugin-directory/issues/new?template=plugin-submission.yml">Submit a plugin</a> ·
+  <a href="CONTRIBUTING.md">Contributing guide</a>
+</p>
 
 ## About
 
