@@ -16,24 +16,31 @@ Plugin authors are encouraged to submit their work here. Accepted submissions re
 
 ## How it works
 
-Plugin authors and community members submit **one plugin package per issue** through the GitHub issue form. Each submission provides four things:
+Plugin authors and community members submit **one plugin package per issue** through the GitHub issue form.
 
-- the exact GitHub URL of the package directory on the repository's current default branch — the repository root, or a `/tree/<branch>/<path>` directory URL for a nested package;
-- one primary category from the Harness category list;
-- a one-line description of the plugin's main capability; and
-- the install command copied from the plugin's own documentation.
+| Required field | What to provide |
+| --- | --- |
+| Package URL | The exact GitHub URL of the package directory on the repository's current default branch: either the repository root or a `/tree/<branch>/<path>` URL for a nested package. |
+| Primary category | One category from the Harness category list. |
+| Description | One factual line describing the plugin's main capability. |
+| Install command | A single-line command copied from the plugin's own documentation. |
 
-Automated checks validate the submitted information and package structure. Checks run when the issue opens and then once per day for seven days. Accepted submissions receive their listing URL and are closed; unaccepted submissions are closed after the final check and may be submitted again later. The upstream repository remains the source of truth for the plugin itself.
+![Plugin submission verification workflow](assets/submission-workflow.png)
+
+Each check reads the issue's current values and validates the submitted information and package structure. The upstream repository remains the source of truth for the plugin itself.
 
 ## What can pass verification
 
-Verification is intended for publicly accessible, installable DSH Profile Bundles. A plugin can pass when:
+Verification is intended for publicly accessible, installable DSH Profile Bundles.
 
-- the submitted URL identifies the exact package directory on the repository's current default branch;
-- that directory contains its own `package.json`;
-- `package.json` declares `dsh.bundle.patch`;
-- the declared patch file exists inside the submitted package directory; and
-- the submission includes a valid category, factual one-line description, and documented install command.
+| Rule | Passes verification | Does not pass |
+| --- | --- | --- |
+| Repository access | The repository is public. | The repository is private or inaccessible. |
+| Package URL | Points to the exact package directory on the current default branch. | Points to a file, the wrong directory, or a non-default branch. |
+| Package manifest | `package.json` is directly inside the submitted directory. | `package.json` is missing or located elsewhere. |
+| Bundle declaration | `package.json` declares `dsh.bundle.patch`. | The package declares only `dsh.client` or no bundle patch. |
+| Patch file | The declared patch file exists inside the submitted package directory. | The declared patch file is missing or outside the package directory. |
+| Listing details | Includes a valid category, factual one-line description, and documented single-line install command. | Any required value is missing, invalid, promotional, or undocumented. |
 
 A package that declares only `dsh.client` is not an installable Profile Bundle and cannot pass. These checks verify structure and listing information, not the plugin's runtime behavior, quality, compatibility, or security. See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete submission requirements.
 
@@ -43,9 +50,11 @@ Directory checks establish that a submission has the expected basic structure; t
 
 Before installing a third-party plugin, review its source code, permissions, dependencies, license, and upstream documentation.
 
-## Submit or contribute
+## Submit Your Plugin
 
-Plugin authors and community members can [submit a plugin](https://github.com/alexchenzl/dsh-plugin-directory/issues/new?template=plugin-submission.yml). For eligibility rules, submission requirements, corrections, and pull request guidance, see [CONTRIBUTING.md](CONTRIBUTING.md).
+Built a plugin for DeepSeek Harness? [Submit your plugin](https://github.com/alexchenzl/dsh-plugin-directory/issues/new?template=plugin-submission.yml) to share it with the community and help more users discover your work.
+
+Review the [contributing guide](CONTRIBUTING.md) for eligibility rules, submission requirements, corrections, and pull request guidance.
 
 ## License
 

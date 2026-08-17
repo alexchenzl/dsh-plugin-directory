@@ -1,6 +1,6 @@
 name: Plugin submission
 description: Submit one public DSH plugin package for the directory.
-title: "[Plugin]: "
+title: "Plugin name: "
 labels:
   - plugin-submission
 body:
@@ -9,25 +9,24 @@ body:
       value: |
         Submit **one plugin package per issue**. A repository with several packages needs one issue per package.
 
-        Submissions are checked automatically when the issue is opened and then once per day for seven days.
-        Accepted submissions receive a reply with their directory URL and are closed. Unaccepted submissions
-        are closed after the final check and may be submitted again later.
-
-        See the [contributing guide](https://github.com/alexchenzl/dsh-plugin-directory/blob/main/CONTRIBUTING.md)
-        for the full eligibility rules.
+        Please read the [contributing guide](https://github.com/alexchenzl/dsh-plugin-directory/blob/main/CONTRIBUTING.md)
+        before submitting to confirm your plugin meets the eligibility rules.
 
   - type: input
     id: url
     attributes:
       label: Plugin package URL
       description: |-
-        The exact GitHub directory that is the plugin package root, on the repository's current default
-        branch. A repository-root plugin does not need a `/tree/...` path; a plugin in a subdirectory does.
+        The GitHub URL of the folder that contains your plugin package.
 
-        - **Root package:** https://github.com/liustack/modlens
-        - **Nested package:** https://github.com/volcengine/OpenViking/tree/main/examples/dsh-memory-plugin
+        If the plugin lives at the root of the repository, use the repository URL as-is — no extra path needed.
+        If the plugin lives in a subdirectory, include the full `/tree/<branch>/...` path to that folder.
 
-        Do not link a `package.json`, patch file, README, or any other single file.
+        **Examples**
+
+        **Root:** https://github.com/liustack/modlens
+
+        **Subdirectory:** https://github.com/volcengine/OpenViking/tree/main/examples/dsh-memory-plugin
       placeholder: https://github.com/owner/repository/tree/main/path/to/plugin
     validations:
       required: true
@@ -54,9 +53,7 @@ body:
     id: description
     attributes:
       label: One-line description
-      description: >-
-        Plainly summarize the plugin's main capability in a single line. Avoid rankings, comparisons,
-        and promotional language.
+      description: Describe what the plugin does in one sentence.
       placeholder: Adds persistent conversation memory backed by a local vector store.
     validations:
       required: true
@@ -65,18 +62,8 @@ body:
     id: install
     attributes:
       label: Install command
-      description: >-
-        Copy the installation command from the plugin's own README or package documentation. When both an
-        npm package and a Git-source install are documented, prefer the npm command. The command is stored
-        and rendered as inert text and is never executed.
+      description: The install command from your plugin's README that users can run as-is.
       placeholder: dsh plugin --profile <name> add <package>
       render: shell
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        Do not add the plugin name, author, stars, license, README, or version — those come from the source
-        repository. Submitting a repository does not establish ownership, and acceptance is not an
-        endorsement, compatibility guarantee, runtime test, or security audit.

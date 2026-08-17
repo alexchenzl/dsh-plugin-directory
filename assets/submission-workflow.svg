@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Plugin submission verification workflow</title>
+  <desc id="desc">A plugin is submitted and checked immediately. Passing submissions are listed and closed. Failed submissions can be fixed and are checked daily for seven days. After the window closes, the issue is closed and the plugin may be submitted again.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52637a" />
+    </marker>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#182235" flood-opacity="0.12" />
+    </filter>
+    <style>
+      .background { fill: #f8fafc; }
+      .box { fill: #ffffff; stroke: #718096; stroke-width: 2; filter: url(#shadow); }
+      .action { fill: #eef4ff; stroke: #4777d9; }
+      .success { fill: #ecfdf3; stroke: #28865a; }
+      .retry { fill: #fff8e6; stroke: #b7791f; }
+      .decision { fill: #f6f0ff; stroke: #805ad5; stroke-width: 2; filter: url(#shadow); }
+      .line { fill: none; stroke: #52637a; stroke-width: 2.5; marker-end: url(#arrow); }
+      .label { fill: #172033; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; font-weight: 600; text-anchor: middle; }
+      .small { fill: #52637a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 600; text-anchor: middle; }
+      .branch { fill: #36445a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 700; }
+      .note { fill: #52637a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="background" width="1200" height="600" rx="20" />
+
+  <path class="line" d="M240 100 H290" />
+  <path class="line" d="M510 100 H520" />
+  <path class="line" d="M720 100 H770" />
+  <path class="line" d="M950 100 H990" />
+  <path class="line" d="M620 145 V205" />
+  <path class="line" d="M730 240 H745" />
+  <path class="line" d="M955 240 H995" />
+  <path class="line" d="M850 285 V380" />
+  <path class="line" d="M850 444 V480" />
+  <path class="line" d="M1155 240 H1170 V25 H400 V68" />
+
+  <text class="branch" x="738" y="87">Yes</text>
+  <text class="branch" x="635" y="180">No</text>
+  <text class="branch" x="965" y="226">Yes</text>
+  <text class="branch" x="865" y="332">No</text>
+  <text class="small" x="905" y="17">Next daily check</text>
+
+  <rect class="box action" x="40" y="68" width="200" height="64" rx="12" />
+  <text class="label" x="140" y="95">
+    <tspan x="140" dy="0">Submit one</tspan>
+    <tspan x="140" dy="23">plugin package</tspan>
+  </text>
+
+  <rect class="box action" x="290" y="68" width="220" height="64" rx="12" />
+  <text class="label" x="400" y="95">
+    <tspan x="400" dy="0">Automated check</tspan>
+    <tspan x="400" dy="23">runs immediately</tspan>
+  </text>
+
+  <polygon class="decision" points="620,55 720,100 620,145 520,100" />
+  <text class="label" x="620" y="106">Passes?</text>
+
+  <rect class="box success" x="770" y="68" width="180" height="64" rx="12" />
+  <text class="label" x="860" y="95">
+    <tspan x="860" dy="0">Listing URL</tspan>
+    <tspan x="860" dy="23">is posted</tspan>
+  </text>
+
+  <rect class="box success" x="990" y="68" width="165" height="64" rx="12" />
+  <text class="label" x="1072.5" y="95">
+    <tspan x="1072.5" dy="0">Issue closes</tspan>
+    <tspan class="small" x="1072.5" dy="22">Accepted</tspan>
+  </text>
+
+  <rect class="box retry" x="510" y="205" width="220" height="70" rx="12" />
+  <text class="label" x="620" y="235">
+    <tspan x="620" dy="0">Fix the submission</tspan>
+    <tspan x="620" dy="23">or source package</tspan>
+  </text>
+
+  <polygon class="decision" points="850,195 955,240 850,285 745,240" />
+  <text class="label" x="850" y="235">
+    <tspan x="850" dy="0">Within seven-day</tspan>
+    <tspan x="850" dy="22">window?</tspan>
+  </text>
+
+  <rect class="box retry" x="995" y="205" width="160" height="70" rx="12" />
+  <text class="label" x="1075" y="235">
+    <tspan x="1075" dy="0">Daily</tspan>
+    <tspan x="1075" dy="23">recheck</tspan>
+  </text>
+
+  <rect class="box" x="760" y="380" width="180" height="64" rx="12" />
+  <text class="label" x="850" y="407">
+    <tspan x="850" dy="0">Issue closes</tspan>
+    <tspan class="small" x="850" dy="22">Not accepted</tspan>
+  </text>
+
+  <rect class="box action" x="760" y="480" width="180" height="64" rx="12" />
+  <text class="label" x="850" y="507">
+    <tspan x="850" dy="0">Submit again</tspan>
+    <tspan x="850" dy="23">later</tspan>
+  </text>
+
+  <text class="note" x="600" y="575">Open issues are rechecked once per day for seven days.</text>
+</svg>
