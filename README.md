@@ -45,4 +45,4 @@ Plugin authors and community members can [submit a plugin](https://github.com/al
 
 ## License
 
-Repository code and documentation are available under the [MIT License](LICENSE). Third-party plugins remain subject to their own licenses.
+Repository code and documentation are available under the [Apache License 2.0](LICENSE). Third-party plugins remain subject to their own licenses.

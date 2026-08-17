@@ -74,4 +74,4 @@ If you discover a security issue in this repository's submission or validation t
 
 ## License
 
-By contributing, you agree that your contribution will be licensed under this repository's [MIT License](LICENSE). Third-party plugin code and metadata remain subject to their upstream licenses.
+By contributing, you agree that your contribution will be licensed under this repository's [Apache License 2.0](LICENSE). Third-party plugin code and metadata remain subject to their upstream licenses.
