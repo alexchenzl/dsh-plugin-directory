@@ -1,6 +1,6 @@
 name: Plugin submission
 description: Submit one public DSH plugin package for the directory.
-title: "Plugin name: "
+title: "[Plugin]: "
 labels:
   - plugin-submission
 body:
