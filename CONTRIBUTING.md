@@ -30,19 +30,33 @@ A nested package uses a directory URL on the default branch:
 https://github.com/owner/repository/tree/main/path/to/plugin
 ```
 
-Choose exactly one option from the form's category dropdown:
+Choose exactly one option from the form's category dropdown based on why a user would install the plugin, not how the plugin is implemented:
 
 - `Models & Providers (models)`
-- `Tools (tools)`
-- `Skills (skills)`
-- `Sessions (sessions)`
-- `Sandboxes (sandboxes)`
-- `Storage (storage)`
-- `Agent Loops (loops)`
-- `Scheduling (scheduling)`
-- `User Interface (ui)`
+- `Agents & Automation (agents)`
+- `Memory & Knowledge (memory)`
+- `Sessions & History (sessions)`
+- `Coding & Dev Tools (coding)`
+- `Web & Browser (browser)`
+- `Multimodal & Media (multimodal)`
+- `Channels & Notifications (channels)`
+- `UI Enhancements (ui)`
+- `Themes & Fun (themes)`
+- `Usage & Cost (usage)`
+- `Security & Permissions (security)`
+- `Plugins & Runtime (plugin-tools)`
 
 Select one of these options exactly as listed; the directory derives the stored category from your selection. An edited or free-form category value is invalid.
+
+### Choosing between similar categories
+
+- Choose the plugin's headline user-facing capability; packaging and extension mechanisms are not categories.
+- Model memory, RAG, and semantic recall belong in **Memory & Knowledge**; conversation branching, replay, and export belong in **Sessions & History**.
+- Functional productivity improvements belong in **UI Enhancements**; appearance and entertainment belong in **Themes & Fun**.
+- General development tools belong in **Coding & Dev Tools**; tools specifically for DSH plugins belong in **Plugins & Runtime**.
+- Vision, OCR, image, voice, speech, audio, and video capabilities belong in **Multimodal & Media**, even when implemented as a provider or gateway.
+- Documents are not multimodal by default: OCR belongs in **Multimodal & Media**, while RAG ingestion belongs in **Memory & Knowledge**.
+- Remote DSH access belongs in **Channels & Notifications**; responsive/mobile UI belongs in **UI Enhancements**; remote development workspaces belong in **Coding & Dev Tools**.
 
 The automation checks new issues immediately and then once per day for seven days. If you need to fix the source package or the submitted values, do so while the issue remains open; a new issue is not required, and each check re-reads the issue's current values.
 

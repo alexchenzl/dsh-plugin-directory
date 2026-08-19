@@ -31,21 +31,48 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        ### Primary category reference
+
+        Choose based on **why a user would install the plugin**, not how the plugin is implemented.
+
+        | Category | Use this for |
+        | --- | --- |
+        | Models & Providers | Model providers, authentication, routing, fallback, gateways |
+        | Agents & Automation | Multi-agent systems, workflows, orchestration, scheduling, background tasks |
+        | Memory & Knowledge | Persistent memory, RAG, knowledge bases, context management, semantic recall |
+        | Sessions & History | Session history, import/export, branching, rewind, replay, handoff |
+        | Coding & Dev Tools | Git, code review, terminals, editors, testing, debugging, developer workflows |
+        | Web & Browser | Browser automation, web search, fetching, crawling, scraping |
+        | Multimodal & Media | Vision, OCR, image generation, voice, speech, audio, video |
+        | Channels & Notifications | Slack, Discord, Telegram, Feishu, webhooks, notifications, remote DSH access |
+        | UI Enhancements | Functional UI improvements such as sidebars, navigation, composers, dashboards, GenUI |
+        | Themes & Fun | Themes, skins, wallpapers, pets, games, music and novelty experiences |
+        | Usage & Cost | Tokens, usage, balances, quotas, cost tracking, budgets |
+        | Security & Permissions | Authentication, approvals, permissions, sandboxing, auditing, policy controls |
+        | Plugins & Runtime | Plugin discovery/installers, plugin development tools, runtime infrastructure, alternative clients |
+
   - type: dropdown
     id: category
     attributes:
       label: Primary category
-      description: Choose the one category that best describes the plugin's main capability.
+      description: Select the single category that best matches the plugin's main user-facing capability.
       options:
         - Models & Providers (models)
-        - Tools (tools)
-        - Skills (skills)
-        - Sessions (sessions)
-        - Sandboxes (sandboxes)
-        - Storage (storage)
-        - Agent Loops (loops)
-        - Scheduling (scheduling)
-        - User Interface (ui)
+        - Agents & Automation (agents)
+        - Memory & Knowledge (memory)
+        - Sessions & History (sessions)
+        - Coding & Dev Tools (coding)
+        - Web & Browser (browser)
+        - Multimodal & Media (multimodal)
+        - Channels & Notifications (channels)
+        - UI Enhancements (ui)
+        - Themes & Fun (themes)
+        - Usage & Cost (usage)
+        - Security & Permissions (security)
+        - Plugins & Runtime (plugin-tools)
     validations:
       required: true
 
@@ -71,5 +98,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## ⭐ Help the directory grow
-        **<a href="https://github.com/alexchenzl/dsh-plugin-directory" target="_blank">Star this repo</a> to help more developers discover your plugin.**
+        > [!TIP]
+        > **Help the directory grow**
+        >
+        > [Star this repo](https://github.com/alexchenzl/dsh-plugin-directory) to help more developers discover your plugin.
