@@ -1,0 +1,61 @@
+name: Report a plugin listing
+description: Report a problematic plugin listing on dsh.directory.
+title: "[Plugin report]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to report a plugin listing on [DSH Directory](https://dsh.directory/).
+
+        For a bug in the plugin itself, report it to the plugin's source repository. For a problem with the DSH Directory website, open a blank issue instead.
+
+        Do not include secrets, private data, or instructions that would make harmful behavior easier to reproduce.
+
+  - type: input
+    id: listing-url
+    attributes:
+      label: Plugin listing URL
+      description: Paste the full dsh.directory URL for the affected plugin.
+      placeholder: https://dsh.directory/plugins/owner/repository/path/to/plugin
+    validations:
+      required: true
+
+  - type: dropdown
+    id: report-type
+    attributes:
+      label: What are you reporting?
+      options:
+        - Malicious or unsafe behavior
+        - Incorrect, outdated, or duplicate listing
+        - Broken or unavailable source
+        - Impersonation, trademark, or policy violation
+    validations:
+      required: true
+
+  - type: input
+    id: evidence-url
+    attributes:
+      label: Supporting URL
+      description: Link to the upstream source, documentation, or other public evidence, if available.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: false
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain what is wrong, what the listing should show instead, and why. Add public links or screenshots when helpful.
+      placeholder: Describe the issue and the requested correction or action.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the open issues and did not find an existing report for this listing.
+          required: true
